@@ -70,7 +70,7 @@ a {
 .section-banner {
     padding: 2rem;
     border-top: 5px ridge var(--primary);
-    background: linear-gradient(rgba(255, 255, 255, .5), rgba(255, 255, 255, .5)), url(../images/banner2.png);
+    background: linear-gradient(rgba(255, 255, 255, .5), rgba(255, 255, 255, .5)), url(../images/banner\ \(1\).png);
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
