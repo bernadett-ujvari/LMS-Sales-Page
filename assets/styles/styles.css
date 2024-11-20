@@ -6,6 +6,7 @@
     --link: #1528d9;
     --link-hover: #1285f1;
     --padding-btn-link: 0.5rem 1rem;
+    --padding-btn-link-sm: 0.5rem 0.75rem;
 }
 
 * {
@@ -20,7 +21,7 @@ html {
 
 body {
     font-family: "Poppins", sans-serif;
-
+    min-width: 400px;
 }
 
 img {
@@ -36,7 +37,7 @@ a {
 }
 /* Navbar */
 .navbar {
-    padding: 1rem 1rem;
+    padding: 1rem 6rem;
     background-color: var(--light);
     color: var(--dark);
 }
@@ -66,9 +67,13 @@ a {
     color: var(--link-hover);
 }
 
+.nav-login {
+    margin-left: 2rem;
+}
+
 /* Main Banner */
 .section-banner {
-    padding: 2rem;
+    padding: 6rem;
     border-top: 5px ridge var(--primary);
     background: linear-gradient(rgba(255, 255, 255, .5), rgba(255, 255, 255, .5)), url(../images/banner\ \(1\).png);
     background-repeat: no-repeat;
@@ -131,8 +136,23 @@ a {
 .footer-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+    grid-template-areas: 
+        "logo links1 links2";
     grid-gap: 40px;
-    padding: 1re 1rem;
+    padding: 1rem 1rem;
+}
+
+.foot-log {
+    align-self: center;
+    grid-area: logo;
+}
+
+.footer-links-1 {
+    grid-area: links1;
+}
+
+.footer-links-2 {
+    grid-area: links2;
 }
 
 .footer-link {
@@ -178,6 +198,9 @@ a {
     background-color: var(--light);
     padding: 2rem;
     border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .card-heading {
@@ -218,4 +241,53 @@ h3 {
 .bg-dark {
     color: var(--light);
     background-color: var(--dark);
+}
+
+/* Media queries */
+@media screen and (max-width: 992px) {
+    html {
+        font-size: 18px;
+    }
+
+    /* Testimonials */
+    .testimonials-container {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+@media screen and (max-width: 768px) {
+    .nav-link, .btn {
+        padding: var(--padding-btn-link-sm);
+    }
+
+    .d-md-max-none {
+        display: none;
+    }
+
+    .pricing-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .d-sm-max-none {
+        display: none;
+    }
+
+    .main-menu {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    html {
+        font-size: 16px;
+    }
+
+    .footer-container {
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-areas: 
+            "logo logo"
+            "links1 links2";
+    }
 }
