@@ -80,11 +80,13 @@ a {
     background-position: center center;
     background-size: cover;
     min-height: 500px;
+
+    .banner-content {
+        width: 60%;
+    }
 }
 
-.banner-content {
-    width: 60%;
-}
+
 
 /* Video */
 .video-content {
@@ -92,11 +94,13 @@ a {
     max-width: 900px;
     margin: 0 auto;
     cursor: pointer;
+
+    &> .video-preview {
+        width: 100%;
+        cursor: pointer;
+    }
 }
 
-.video-content > .video-preview {
-    width: 100%;
-}
 
 /* Testimonials */
 .testimonials-container {
@@ -112,24 +116,26 @@ a {
     grid-template-columns: 1fr 1fr;
     grid-gap: 60px;
     margin: 2rem 0;
+
+    .price-tag {
+        font-size: 1.8rem;
+        letter-spacing: 1px;
+        font-weight: 600;
+        padding: 1rem 0;
+        margin-bottom: 1rem;
+        border-bottom: 3px ridge var(--primary);
+    }
+    
+    .pricing-tagline {
+        min-height: 3.5rem;
+    }
+    
+    .pricing-feature-list {
+        margin: 1.5rem 0;
+    }
 }
 
-.price-tag {
-    font-size: 1.8rem;
-    letter-spacing: 1px;
-    font-weight: 600;
-    padding: 1rem 0;
-    margin-bottom: 1rem;
-    border-bottom: 3px ridge var(--primary);
-}
 
-.pricing-tagline {
-    min-height: 3.5rem;
-}
-
-.pricing-feature-list {
-    margin: 1.5rem 0;
-}
 
 /* Footer */
 
@@ -140,28 +146,30 @@ a {
         "logo links1 links2";
     grid-gap: 40px;
     padding: 1rem 1rem;
+
+    .foot-log {
+        align-self: center;
+        grid-area: logo;
+    }
+    
+    .footer-links-1 {
+        grid-area: links1;
+    }
+    
+    .footer-links-2 {
+        grid-area: links2;
+    }
+    
+    .footer-link {
+        color: var(--light);
+    }
+    
+    .footer-link:hover {
+        color: var(--light-hover);
+    }
 }
 
-.foot-log {
-    align-self: center;
-    grid-area: logo;
-}
 
-.footer-links-1 {
-    grid-area: links1;
-}
-
-.footer-links-2 {
-    grid-area: links2;
-}
-
-.footer-link {
-    color: var(--light);
-}
-
-.footer-link:hover {
-    color: var(--light-hover);
-}
 
 /* Utility = hasznos osztályok */
 .container {
